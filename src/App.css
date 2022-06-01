@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #302f2f;
+}
+
+:root {
+    --main-red: #dd1a1a;
+    --txt-red: #fe1936;
+    --btn-red: #d93f3f;
+    --select-red: #ed8f8f;
+    --background: #e5e5e5;
+}
+
+.App {
+    text-align: center;
+}
+
+button {
+    font-size: calc(10px + 2vmin);
+}

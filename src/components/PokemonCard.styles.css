@@ -1,0 +1,10 @@
+.card-pokemon {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 25%;
+    cursor: pointer;
+}
+.card-pokemon img {
+    width: 100%;
+}
