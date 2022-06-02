@@ -1,0 +1,17 @@
+.footer {
+    /* align-self: flex-end; */
+    /* display: inline-block; */
+    height: 10rem;
+    width: 100%;
+    /* margin-top: calc(5% + 60px); */
+}
+
+.footer .top {
+    height: 7rem;
+    background-color: var(--main-red);
+    /* width: 100%; */
+}
+.footer .bottom {
+    background-color: #0c0c0c;
+    height: 3rem;
+}

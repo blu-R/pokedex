@@ -1,8 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     color: #302f2f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 :root {
@@ -13,10 +19,42 @@
     --background: #e5e5e5;
 }
 
+/* body {
+    min-height: 100vh;
+} */
 .App {
     text-align: center;
+    /* margin: 0 auto; */
+    min-height: 100vh;
+    /* position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
 }
 
 button {
-    font-size: calc(10px + 2vmin);
+    /* font-size: calc(5px + 2vmin); */
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 45px;
+    border-style: none;
+    background-color: var(--btn-red);
+    color: #fff;
+    cursor: pointer;
+}
+
+input {
+    width: 500px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 15px;
+    border-style: none;
+}
+
+.search-box {
+    box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.25);
 }

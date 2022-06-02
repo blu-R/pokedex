@@ -9,6 +9,7 @@ import PokemonInfo from "./components/PokemonInfo";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Config from "./components/Config";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
     const userName = useSelector((state) => state.userName);
@@ -25,6 +26,7 @@ function App() {
                         <Route path="/config" element={<Config />} />
                     </Route>
                 </Routes>
+                {!userName && <Footer />}
             </div>
         </HashRouter>
     );

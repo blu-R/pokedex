@@ -28,7 +28,7 @@ function Pokedex() {
 
     const [page, setPage] = useState(1);
 
-    const pokemonPerPage = 5;
+    const pokemonPerPage = 16;
     const lastIndex = pokemonPerPage * page;
     const firstIndex = lastIndex - pokemonPerPage;
     const pokemonPaginated = pokemonsUrl.slice(firstIndex, lastIndex);
@@ -38,7 +38,7 @@ function Pokedex() {
     const numbers = [];
 
     for (let i = 1; i <= lastPage; i++) {
-        if (i < page + 5 && i > page - 5) {
+        if (i < page + 3 && i > page - 3) {
             numbers.push(i);
         }
     }
@@ -57,30 +57,31 @@ function Pokedex() {
     };
 
     return (
-        <div>
-            <header className="header">Pokedex</header>
+        <div className="pokedex">
             <div className="body">
-                <p>
+                <p className="greeting">
                     <strong>Welcome {userName},</strong> here you can find your
                     favorite pokemon
                 </p>
-                <div className="search-box">
-                    <input
-                        type="text"
-                        value={characterSearch}
-                        onChange={(e) => setCharacterSearch(e.target.value)}
-                        placeholder="Search character"
-                    />
-                    <button
-                        onClick={() => {
-                            navigate(`/pokedex/${characterSearch}`);
-                            console.log(characterSearch);
-                        }}
-                    >
-                        Search
-                    </button>
+                <div className="selectors">
+                    <div className="search-box-main">
+                        <input
+                            type="text"
+                            value={characterSearch}
+                            onChange={(e) => setCharacterSearch(e.target.value)}
+                            placeholder="Search pokémon"
+                        />
+                        <button
+                            onClick={() => {
+                                navigate(`/pokedex/${characterSearch}`);
+                                // console.log(characterSearch);
+                            }}
+                        >
+                            Search
+                        </button>
+                    </div>
                     <select onChange={filterCharacters}>
-                        <option value="all">All pokemons</option>
+                        <option value="all">All pokémons</option>
                         {types.map((type, index) => (
                             <option key={index} value={type.url}>
                                 {type.name}
@@ -102,20 +103,29 @@ function Pokedex() {
                         />
                     ))}
                 </div>
-                <button disabled={page === 1} onClick={() => setPage(page - 1)}>
-                    Prev
-                </button>
-                {numbers.map((number, index) => (
-                    <button onClick={() => setPage(number)} key={index}>
-                        {number}
+                <div className="pagination">
+                    <button
+                        disabled={page === 1}
+                        onClick={() => setPage(page - 1)}
+                    >
+                        Prev
                     </button>
-                ))}
-                <button
-                    disabled={page === lastPage}
-                    onClick={() => setPage(page + 1)}
-                >
-                    Next
-                </button>
+                    {numbers.map((number, index) => (
+                        <button
+                            className="btn-pages"
+                            onClick={() => setPage(number)}
+                            key={index}
+                        >
+                            {number}
+                        </button>
+                    ))}
+                    <button
+                        disabled={page === lastPage}
+                        onClick={() => setPage(page + 1)}
+                    >
+                        Next
+                    </button>
+                </div>
             </div>
         </div>
     );

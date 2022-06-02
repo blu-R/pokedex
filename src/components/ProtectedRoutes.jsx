@@ -1,10 +1,11 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProtectedRoutes = () => {
     // Aquí va la condición. Puede ser una condición de cualquier tipo. Lo que
     // Importa es que valide si el usuario está loggeado o no
 
-    const userName = "corco";
+    const userName = useSelector((state) => state.userName);
 
     if (userName) {
         return <Outlet />;

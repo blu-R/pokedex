@@ -1,0 +1,24 @@
+.login {
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.login h2 {
+    color: var(--txt-red);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 55px;
+}
+
+.login p {
+    color: #302f2f;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 35px;
+}

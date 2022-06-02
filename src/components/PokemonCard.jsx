@@ -20,13 +20,50 @@ function PokemonCard({ id, url }) {
     // console.log(url);
 
     return (
-        <div
-            className="card-pokemon"
-            onClick={() => navigate(`/pokedex/${pokemon.id}`)}
-        >
-            <h1>{pokemon.name}</h1>
-            <img src={pokemon.sprites?.other.dream_world.front_default} />
-            <p>{url}</p>
+        <div className="card-container">
+            <div
+                className={`card-pokemon ${pokemon.types?.[0].type.name}-gr `}
+                onClick={() => navigate(`/pokedex/${pokemon.id}`)}
+            >
+                <div className="info">
+                    <img
+                        src={
+                            pokemon.sprites?.other["official-artwork"]
+                                .front_default
+                        }
+                    />
+                    <h1>{pokemon.name}</h1>
+                    <p className="types">
+                        {pokemon.types?.[0].type.name}{" "}
+                        {pokemon.types?.[1] &&
+                            ` / ${pokemon.types?.[1]?.type.name}`}
+                        {pokemon.types?.[2] &&
+                            ` / ${pokemon.types?.[2]?.type.name}`}
+                    </p>
+                    <p className="lbl-type">Type</p>
+                </div>
+                <div className="br"></div>
+                <div className="stats">
+                    <div>
+                        <p className="lbl-stat">HP</p>
+                        <p className="hp">{pokemon.stats?.[0].base_stat}</p>
+                    </div>
+                    <div>
+                        <p className="lbl-stat">Attack</p>
+                        <p className="attack">{pokemon.stats?.[1].base_stat}</p>
+                    </div>
+                    <div>
+                        <p className="lbl-stat">Defense</p>
+                        <p className="defense">
+                            {pokemon.stats?.[2].base_stat}
+                        </p>
+                    </div>
+                    <div>
+                        <p className="lbl-stat">Speed</p>
+                        <p className="speed">{pokemon.stats?.[5].base_stat}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

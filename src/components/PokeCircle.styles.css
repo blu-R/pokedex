@@ -1,0 +1,24 @@
+.poke-circle {
+    position: absolute;
+}
+
+.outer-circle {
+    background-color: #fff;
+    border: 0.9em solid #000;
+    border-radius: 50%;
+    height: 8.4em;
+    position: relative;
+    width: 9em;
+}
+
+.inner-circle {
+    background-color: #212121;
+    border: 0.9em solid #000;
+    border-radius: 50%;
+    height: 68%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 68%;
+}
