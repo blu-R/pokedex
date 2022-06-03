@@ -1,0 +1,44 @@
+.config-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+    padding-bottom: 250px;
+}
+
+.config-container h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.config-container p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.fa-circle-arrow-right {
+    margin-right: 8px;
+    color: var(--btn-red);
+}
+
+.config-container span {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #3d3d3d;
+}
+
+.config-input {
+    margin: 10px 0;
+}
+.config-input input {
+    width: 60px;
+    padding: 8px;
+}
+
+.config-input button {
+    padding: 8px 15px;
+}

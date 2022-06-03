@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import "./PokemonInfo.styles.css";
 
 function PokemonInfo() {
     const { id } = useParams();
-
+    const navigate = useNavigate();
     const [pokemon, setPokemon] = useState({});
 
     useEffect(() => {
@@ -89,7 +89,11 @@ function PokemonInfo() {
                                 <div
                                     className="bar-hp"
                                     style={{
-                                        width: `${pokemon.stats?.[0].base_stat}%`,
+                                        width: `${Math.floor(
+                                            (pokemon.stats?.[0].base_stat *
+                                                100) /
+                                                150
+                                        )}%`,
                                     }}
                                 ></div>
                             </div>
@@ -101,7 +105,11 @@ function PokemonInfo() {
                                 <div
                                     className="bar-attack"
                                     style={{
-                                        width: `${pokemon.stats?.[1].base_stat}%`,
+                                        width: `${Math.floor(
+                                            (pokemon.stats?.[1].base_stat *
+                                                100) /
+                                                150
+                                        )}%`,
                                     }}
                                 ></div>
                             </div>
@@ -113,7 +121,11 @@ function PokemonInfo() {
                                 <div
                                     className="bar-defense"
                                     style={{
-                                        width: `${pokemon.stats?.[2].base_stat}%`,
+                                        width: `${Math.floor(
+                                            (pokemon.stats?.[2].base_stat *
+                                                100) /
+                                                150
+                                        )}%`,
                                     }}
                                 ></div>
                             </div>
@@ -125,7 +137,11 @@ function PokemonInfo() {
                                 <div
                                     className="bar-speed"
                                     style={{
-                                        width: `${pokemon.stats?.[5].base_stat}%`,
+                                        width: `${Math.floor(
+                                            (pokemon.stats?.[5].base_stat *
+                                                100) /
+                                                150
+                                        )}%`,
                                     }}
                                 ></div>
                             </div>
@@ -148,6 +164,12 @@ function PokemonInfo() {
                             </p>
                         ))}
                     </div>
+                    <button
+                        className="info-return"
+                        onClick={() => navigate(-1)}
+                    >
+                        Go back
+                    </button>
                 </div>
             </div>
         </div>

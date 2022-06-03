@@ -3,11 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 .poke-container {
-    /* align-self: stretch; */
     width: 100%;
     margin: 190px 200px;
 }
@@ -159,6 +157,9 @@
     text-transform: capitalize;
 }
 
+.poke-ability p {
+    border: 1px solid #d3d3d3;
+}
 .poke-stats {
     width: 80%;
     margin: 0 auto;
@@ -245,6 +246,7 @@
     box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin: 80px 0 0;
+    padding-bottom: 20px;
 }
 
 .mov-title {
@@ -286,6 +288,11 @@
     border-radius: 50px;
     text-transform: capitalize;
     padding: 15px 30px;
+}
+
+.info-return {
+    width: 200px;
+    margin: 0 auto;
 }
 
 .normal {

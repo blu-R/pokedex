@@ -3,16 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const configSlice = createSlice({
     name: "config",
     initialState: {
-        pokemonsPerPage: 8,
+        pokemonsPerPage: 16,
         isDarkmode: false,
     },
     reducers: {
-        // addPokemon: (state, action) => {
-        //     state.push(action.payload);
-        // },
+        setPokemonsQuantity: (state, action) => {
+            return { ...state, pokemonsPerPage: Number(action.payload) };
+        },
     },
 });
 
-export const {} = configSlice.actions;
+export const { setPokemonsQuantity } = configSlice.actions;
 
 export default configSlice.reducer;

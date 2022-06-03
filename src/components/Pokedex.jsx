@@ -28,7 +28,7 @@ function Pokedex() {
 
     const [page, setPage] = useState(1);
 
-    const pokemonPerPage = 16;
+    const pokemonPerPage = useSelector((state) => state.config.pokemonsPerPage);
     const lastIndex = pokemonPerPage * page;
     const firstIndex = lastIndex - pokemonPerPage;
     const pokemonPaginated = pokemonsUrl.slice(firstIndex, lastIndex);
@@ -88,6 +88,10 @@ function Pokedex() {
                             </option>
                         ))}
                     </select>
+                    <i
+                        className="fa-solid fa-gear"
+                        onClick={() => navigate("/config")}
+                    ></i>
                 </div>
                 <div className="pokemon-list">
                     {pokemonPaginated.map((pokemon, index) => (
