@@ -13,7 +13,7 @@ function UserLogin() {
 
     return (
         <div className="login">
-            <img src="./src/assets/images/logo-xl.png" alt="" />
+            <img src="../src/assets/images/logo-xl.png" alt="" />
             <h2>¡Hi trainer!</h2>
             <p>Before beginning, give me your name</p>
             <div className="search-box">

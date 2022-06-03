@@ -6,7 +6,7 @@ import PokeCircle from "./PokeCircle";
 function Footer() {
     return (
         <div className="footer">
-            <PokeCircle left="45vw" bottom="0px" right="" />
+            <PokeCircle left="46vw" bottom="0px" right="" />
             <div className="top"></div>
             <div className="bottom"></div>
         </div>

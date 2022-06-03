@@ -9,7 +9,11 @@ function Header() {
         <div className="header">
             <div className="top"></div>
             <div className="bottom"></div>
-            <img className="logo" src="./src/assets/images/logo-l.png" alt="" />
+            <img
+                className="logo"
+                src="../src/assets/images/logo-l.png"
+                alt=""
+            />
             <PokeCircle top="75px" right="125px" />
         </div>
         // </div>

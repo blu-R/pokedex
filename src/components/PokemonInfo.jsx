@@ -76,7 +76,7 @@ function PokemonInfo() {
                             <span>Stats</span>
                             <div className="stats-br"></div>
                             <img
-                                src="./src/assets/images/ball-white-l.png"
+                                src="../src/assets/images/ball-white-l.png"
                                 alt=""
                             />
                         </div>
@@ -137,7 +137,7 @@ function PokemonInfo() {
                         <span>Movements</span>
                         <div className="stats-br"></div>
                         <img
-                            src="./src/assets/images/ball-white-l.png"
+                            src="../src/assets/images/ball-white-l.png"
                             alt=""
                         />
                     </div>
